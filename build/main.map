@@ -1,0 +1,426 @@
+
+Discarded input sections
+
+ .text          0x00000000       0x14 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+ .data          0x00000000        0x0 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+ .bss           0x00000000        0x0 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+ .bss           0x00000000        0x0 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
+ .text          0x00000000       0x10 ./source/main.o
+ .data          0x00000000        0x0 ./source/main.o
+ .bss           0x00000000        0x0 ./source/main.o
+ .rodata        0x00000000        0x4 ./source/main.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x08000000         0x00100000         xr
+RAM              0x20000000         0x00020000         xrw
+CCMRAM           0x10000000         0x00010000         rw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+LOAD ./CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
+LOAD ./source/main.o
+START GROUP
+LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a
+LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a
+LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a
+END GROUP
+                0x20020000                _estack = 0x20020000
+                0x00000200                _Min_Heap_Size = 0x200
+                0x00000400                _Min_Stack_Size = 0x400
+
+.isr_vector     0x08000000      0x188
+                0x08000000                . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x08000000      0x188 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+                0x08000000                g_pfnVectors
+                0x08000188                . = ALIGN (0x4)
+
+.text           0x08000188      0x1c0
+                0x08000188                . = ALIGN (0x4)
+ *(.text)
+ .text          0x08000188      0x164 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
+                0x08000188                SystemInit
+                0x0800027c                SystemCoreClockUpdate
+ *(.text*)
+ .text.Reset_Handler
+                0x080002ec       0x44 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+                0x080002ec                Reset_Handler
+ .text.Default_Handler
+                0x08000330        0x2 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+                0x08000330                RTC_Alarm_IRQHandler
+                0x08000330                HASH_RNG_IRQHandler
+                0x08000330                EXTI2_IRQHandler
+                0x08000330                TIM8_CC_IRQHandler
+                0x08000330                DebugMon_Handler
+                0x08000330                TIM1_CC_IRQHandler
+                0x08000330                DMA2_Stream5_IRQHandler
+                0x08000330                HardFault_Handler
+                0x08000330                DMA1_Stream5_IRQHandler
+                0x08000330                SysTick_Handler
+                0x08000330                PVD_IRQHandler
+                0x08000330                SDIO_IRQHandler
+                0x08000330                TAMP_STAMP_IRQHandler
+                0x08000330                PendSV_Handler
+                0x08000330                NMI_Handler
+                0x08000330                CAN2_RX1_IRQHandler
+                0x08000330                EXTI3_IRQHandler
+                0x08000330                TIM8_TRG_COM_TIM14_IRQHandler
+                0x08000330                TIM1_UP_TIM10_IRQHandler
+                0x08000330                TIM8_UP_TIM13_IRQHandler
+                0x08000330                I2C3_ER_IRQHandler
+                0x08000330                EXTI0_IRQHandler
+                0x08000330                I2C2_EV_IRQHandler
+                0x08000330                DMA1_Stream2_IRQHandler
+                0x08000330                CAN1_RX0_IRQHandler
+                0x08000330                FPU_IRQHandler
+                0x08000330                OTG_HS_WKUP_IRQHandler
+                0x08000330                UsageFault_Handler
+                0x08000330                CAN2_SCE_IRQHandler
+                0x08000330                DMA2_Stream2_IRQHandler
+                0x08000330                SPI1_IRQHandler
+                0x08000330                TIM6_DAC_IRQHandler
+                0x08000330                TIM1_BRK_TIM9_IRQHandler
+                0x08000330                DCMI_IRQHandler
+                0x08000330                CAN2_RX0_IRQHandler
+                0x08000330                DMA2_Stream3_IRQHandler
+                0x08000330                USART6_IRQHandler
+                0x08000330                USART3_IRQHandler
+                0x08000330                CRYP_IRQHandler
+                0x08000330                CAN1_RX1_IRQHandler
+                0x08000330                UART5_IRQHandler
+                0x08000330                DMA2_Stream0_IRQHandler
+                0x08000330                TIM4_IRQHandler
+                0x08000330                I2C1_EV_IRQHandler
+                0x08000330                DMA1_Stream6_IRQHandler
+                0x08000330                DMA1_Stream1_IRQHandler
+                0x08000330                UART4_IRQHandler
+                0x08000330                TIM3_IRQHandler
+                0x08000330                RCC_IRQHandler
+                0x08000330                TIM8_BRK_TIM12_IRQHandler
+                0x08000330                Default_Handler
+                0x08000330                EXTI15_10_IRQHandler
+                0x08000330                ADC_IRQHandler
+                0x08000330                DMA1_Stream7_IRQHandler
+                0x08000330                TIM7_IRQHandler
+                0x08000330                CAN2_TX_IRQHandler
+                0x08000330                TIM5_IRQHandler
+                0x08000330                DMA2_Stream7_IRQHandler
+                0x08000330                I2C3_EV_IRQHandler
+                0x08000330                EXTI9_5_IRQHandler
+                0x08000330                RTC_WKUP_IRQHandler
+                0x08000330                ETH_WKUP_IRQHandler
+                0x08000330                SPI2_IRQHandler
+                0x08000330                OTG_HS_EP1_IN_IRQHandler
+                0x08000330                MemManage_Handler
+                0x08000330                DMA1_Stream0_IRQHandler
+                0x08000330                CAN1_TX_IRQHandler
+                0x08000330                SVC_Handler
+                0x08000330                EXTI4_IRQHandler
+                0x08000330                FSMC_IRQHandler
+                0x08000330                ETH_IRQHandler
+                0x08000330                OTG_HS_EP1_OUT_IRQHandler
+                0x08000330                WWDG_IRQHandler
+                0x08000330                TIM2_IRQHandler
+                0x08000330                OTG_FS_WKUP_IRQHandler
+                0x08000330                TIM1_TRG_COM_TIM11_IRQHandler
+                0x08000330                OTG_HS_IRQHandler
+                0x08000330                EXTI1_IRQHandler
+                0x08000330                USART2_IRQHandler
+                0x08000330                I2C2_ER_IRQHandler
+                0x08000330                DMA2_Stream1_IRQHandler
+                0x08000330                CAN1_SCE_IRQHandler
+                0x08000330                FLASH_IRQHandler
+                0x08000330                DMA2_Stream4_IRQHandler
+                0x08000330                BusFault_Handler
+                0x08000330                USART1_IRQHandler
+                0x08000330                OTG_FS_IRQHandler
+                0x08000330                SPI3_IRQHandler
+                0x08000330                DMA1_Stream4_IRQHandler
+                0x08000330                I2C1_ER_IRQHandler
+                0x08000330                DMA2_Stream6_IRQHandler
+                0x08000330                DMA1_Stream3_IRQHandler
+ *fill*         0x08000332        0x2 
+ .text.startup  0x08000334       0x14 ./source/main.o
+                0x08000334                main
+ *(.glue_7)
+ .glue_7        0x08000348        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x08000348        0x0 linker stubs
+ *(.eh_frame)
+ *(.init)
+ *(.fini)
+                0x08000348                . = ALIGN (0x4)
+                0x08000348                _etext = .
+
+.vfp11_veneer   0x08000348        0x0
+ .vfp11_veneer  0x08000348        0x0 linker stubs
+
+.v4_bx          0x08000348        0x0
+ .v4_bx         0x08000348        0x0 linker stubs
+
+.iplt           0x08000348        0x0
+ .iplt          0x08000348        0x0 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+
+.rel.dyn        0x08000348        0x0
+ .rel.iplt      0x08000348        0x0 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+
+.rodata         0x08000348        0x0
+                0x08000348                . = ALIGN (0x4)
+ *(.rodata)
+ *(.rodata*)
+                0x08000348                . = ALIGN (0x4)
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+
+.ARM            0x08000348        0x0
+                0x08000348                __exidx_start = .
+ *(.ARM.exidx*)
+                0x08000348                __exidx_end = .
+
+.preinit_array  0x08000348        0x0
+                [!provide]                PROVIDE (__preinit_array_start = .)
+ *(.preinit_array*)
+                [!provide]                PROVIDE (__preinit_array_end = .)
+
+.init_array     0x08000348        0x0
+                [!provide]                PROVIDE (__init_array_start = .)
+ *(SORT_BY_NAME(.init_array.*))
+ *(.init_array*)
+                [!provide]                PROVIDE (__init_array_end = .)
+
+.fini_array     0x08000348        0x0
+                [!provide]                PROVIDE (__fini_array_start = .)
+ *(SORT_BY_NAME(.fini_array.*))
+ *(.fini_array*)
+                [!provide]                PROVIDE (__fini_array_end = .)
+                0x08000348                _sidata = LOADADDR (.data)
+
+.data           0x20000000       0x14 load address 0x08000348
+                0x20000000                . = ALIGN (0x4)
+                0x20000000                _sdata = .
+ *(.data)
+ .data          0x20000000       0x14 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
+                0x20000000                SystemCoreClock
+                0x20000004                AHBPrescTable
+ *(.data*)
+                0x20000014                . = ALIGN (0x4)
+                0x20000014                _edata = .
+                0x0800035c                _siccmram = LOADADDR (.ccmram)
+
+.igot.plt       0x20000014        0x0 load address 0x0800035c
+ .igot.plt      0x20000014        0x0 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+
+.ccmram         0x10000000        0x0 load address 0x0800035c
+                0x10000000                . = ALIGN (0x4)
+                0x10000000                _sccmram = .
+ *(.ccmram)
+ *(.ccmram*)
+                0x10000000                . = ALIGN (0x4)
+                0x10000000                _eccmram = .
+                0x10000000                . = ALIGN (0x4)
+
+.bss            0x20000014        0x0
+                0x20000014                _sbss = .
+                0x20000014                __bss_start__ = _sbss
+ *(.bss)
+ *(.bss*)
+ *(COMMON)
+                0x20000014                . = ALIGN (0x4)
+                0x20000014                _ebss = .
+                0x20000014                __bss_end__ = _ebss
+
+._user_heap_stack
+                0x20000014      0x604
+                0x20000018                . = ALIGN (0x8)
+ *fill*         0x20000014        0x4 
+                [!provide]                PROVIDE (end = .)
+                [!provide]                PROVIDE (_end = .)
+                0x20000218                . = (. + _Min_Heap_Size)
+ *fill*         0x20000018      0x200 
+                0x20000618                . = (. + _Min_Stack_Size)
+ *fill*         0x20000218      0x400 
+                0x20000618                . = ALIGN (0x8)
+
+/DISCARD/
+ libc.a(*)
+ libm.a(*)
+ libgcc.a(*)
+
+.ARM.attributes
+                0x00000000       0x35
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x21 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+ .ARM.attributes
+                0x00000021       0x34 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
+ .ARM.attributes
+                0x00000055       0x34 ./source/main.o
+OUTPUT(build/main.elf elf32-littlearm)
+LOAD linker stubs
+LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a
+LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a
+LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a
+
+.debug_line     0x00000000      0x70d
+ .debug_line    0x00000000       0xa9 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+ .debug_line    0x000000a9      0x38e ./CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
+ .debug_line    0x00000437      0x2d6 ./source/main.o
+
+.debug_info     0x00000000     0x1fa8
+ .debug_info    0x00000000       0x22 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+ .debug_info    0x00000022      0x704 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
+ .debug_info    0x00000726     0x1882 ./source/main.o
+
+.debug_abbrev   0x00000000      0x36d
+ .debug_abbrev  0x00000000       0x12 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+ .debug_abbrev  0x00000012      0x192 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
+ .debug_abbrev  0x000001a4      0x1c9 ./source/main.o
+
+.debug_aranges  0x00000000       0x70
+ .debug_aranges
+                0x00000000       0x28 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+ .debug_aranges
+                0x00000028       0x20 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
+ .debug_aranges
+                0x00000048       0x28 ./source/main.o
+
+.debug_str      0x00000000      0xbba
+ .debug_str     0x00000000       0x63 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+ .debug_str     0x00000063      0x38a ./CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
+                                0x3e9 (size before relaxing)
+ .debug_str     0x000003ed      0x7cd ./source/main.o
+                                0xa1c (size before relaxing)
+
+.debug_ranges   0x00000000       0x38
+ .debug_ranges  0x00000000       0x20 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+ .debug_ranges  0x00000020       0x18 ./source/main.o
+
+.debug_loc      0x00000000      0x133
+ .debug_loc     0x00000000      0x133 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
+
+.comment        0x00000000       0x49
+ .comment       0x00000000       0x49 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
+                                 0x4a (size before relaxing)
+ .comment       0x00000049       0x4a ./source/main.o
+
+.debug_frame    0x00000000       0x68
+ .debug_frame   0x00000000       0x38 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
+ .debug_frame   0x00000038       0x30 ./source/main.o
+
+Cross Reference Table
+
+Symbol                                            File
+ADC_IRQHandler                                    ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+AHBPrescTable                                     ./CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
+BusFault_Handler                                  ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+CAN1_RX0_IRQHandler                               ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+CAN1_RX1_IRQHandler                               ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+CAN1_SCE_IRQHandler                               ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+CAN1_TX_IRQHandler                                ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+CAN2_RX0_IRQHandler                               ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+CAN2_RX1_IRQHandler                               ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+CAN2_SCE_IRQHandler                               ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+CAN2_TX_IRQHandler                                ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+CRYP_IRQHandler                                   ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+DCMI_IRQHandler                                   ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+DMA1_Stream0_IRQHandler                           ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+DMA1_Stream1_IRQHandler                           ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+DMA1_Stream2_IRQHandler                           ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+DMA1_Stream3_IRQHandler                           ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+DMA1_Stream4_IRQHandler                           ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+DMA1_Stream5_IRQHandler                           ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+DMA1_Stream6_IRQHandler                           ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+DMA1_Stream7_IRQHandler                           ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+DMA2_Stream0_IRQHandler                           ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+DMA2_Stream1_IRQHandler                           ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+DMA2_Stream2_IRQHandler                           ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+DMA2_Stream3_IRQHandler                           ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+DMA2_Stream4_IRQHandler                           ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+DMA2_Stream5_IRQHandler                           ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+DMA2_Stream6_IRQHandler                           ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+DMA2_Stream7_IRQHandler                           ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+DebugMon_Handler                                  ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+Default_Handler                                   ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+ETH_IRQHandler                                    ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+ETH_WKUP_IRQHandler                               ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+EXTI0_IRQHandler                                  ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+EXTI15_10_IRQHandler                              ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+EXTI1_IRQHandler                                  ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+EXTI2_IRQHandler                                  ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+EXTI3_IRQHandler                                  ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+EXTI4_IRQHandler                                  ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+EXTI9_5_IRQHandler                                ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+FLASH_IRQHandler                                  ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+FPU_IRQHandler                                    ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+FSMC_IRQHandler                                   ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+HASH_RNG_IRQHandler                               ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+HardFault_Handler                                 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+I2C1_ER_IRQHandler                                ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+I2C1_EV_IRQHandler                                ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+I2C2_ER_IRQHandler                                ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+I2C2_EV_IRQHandler                                ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+I2C3_ER_IRQHandler                                ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+I2C3_EV_IRQHandler                                ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+MCU::RCC                                          ./source/main.o
+MemManage_Handler                                 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+NMI_Handler                                       ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+OTG_FS_IRQHandler                                 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+OTG_FS_WKUP_IRQHandler                            ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+OTG_HS_EP1_IN_IRQHandler                          ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+OTG_HS_EP1_OUT_IRQHandler                         ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+OTG_HS_IRQHandler                                 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+OTG_HS_WKUP_IRQHandler                            ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+PVD_IRQHandler                                    ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+PendSV_Handler                                    ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+RCC_IRQHandler                                    ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+RTC_Alarm_IRQHandler                              ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+RTC_WKUP_IRQHandler                               ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+Reset_Handler                                     ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+SDIO_IRQHandler                                   ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+SPI1_IRQHandler                                   ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+SPI2_IRQHandler                                   ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+SPI3_IRQHandler                                   ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+SVC_Handler                                       ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+SysTick_Handler                                   ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+SystemCoreClock                                   ./CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
+SystemCoreClockUpdate                             ./CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
+SystemInit                                        ./CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.o
+                                                  ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+TAMP_STAMP_IRQHandler                             ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+TIM1_BRK_TIM9_IRQHandler                          ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+TIM1_CC_IRQHandler                                ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+TIM1_TRG_COM_TIM11_IRQHandler                     ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+TIM1_UP_TIM10_IRQHandler                          ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+TIM2_IRQHandler                                   ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+TIM3_IRQHandler                                   ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+TIM4_IRQHandler                                   ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+TIM5_IRQHandler                                   ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+TIM6_DAC_IRQHandler                               ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+TIM7_IRQHandler                                   ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+TIM8_BRK_TIM12_IRQHandler                         ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+TIM8_CC_IRQHandler                                ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+TIM8_TRG_COM_TIM14_IRQHandler                     ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+TIM8_UP_TIM13_IRQHandler                          ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+Test()                                            ./source/main.o
+UART4_IRQHandler                                  ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+UART5_IRQHandler                                  ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+USART1_IRQHandler                                 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+USART2_IRQHandler                                 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+USART3_IRQHandler                                 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+USART6_IRQHandler                                 ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+UsageFault_Handler                                ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+WWDG_IRQHandler                                   ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+_ebss                                             ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+_edata                                            ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+_estack                                           ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+_sbss                                             ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+_sdata                                            ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+_sidata                                           ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+g_pfnVectors                                      ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
+main                                              ./source/main.o
+                                                  ./CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc_ride7/startup_stm32f40_41xxx.o
