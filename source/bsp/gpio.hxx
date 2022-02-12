@@ -88,14 +88,38 @@ namespace Gpio
     {
         enum {Address = GPIOH_Base};
     };
+
+
+    
+
+
+
+    
+    
+    
     
     
 
 
-    template <Port Port, Pin pin, Mode mode>
+    template <Port Port, Pin pin>
     class Gpio
     {
     public:
+
+    static inline void Mode(Mode mode)
+    {
+
+    }
+
+    static inline void Set()
+    {
+
+    }
+
+    static inline void Reset()
+    {
+
+    }
        
     };
 

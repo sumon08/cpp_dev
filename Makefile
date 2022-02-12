@@ -86,7 +86,7 @@ all: $(PROJECT_NAME).elf $(PROJECT_NAME).hex $(PROJECT_NAME).bin
 	
 %.o: %.cxx
 	echo $(CP_FLAGS)
-	$(CXX) -c $(CP_FLAGS) -std=c17 -fno-rtti -fno-exceptions $(INCDIR) $< -o $@
+	$(CXX) -c $(CP_FLAGS) -std=c++17 -fno-rtti -fno-exceptions $(INCDIR) $< -o $@
 
 
 
